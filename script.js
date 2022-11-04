@@ -12,7 +12,7 @@ function compute()
     
     //Display Output
     var result = document.getElementById("result")
-    result.innerText = `If you deposit ${principal} \n at an interest rate of ${rate}%, \n you will receive an amount of ${interest} in the year ${year}`
+    result.innerHTML = `If you deposit <mark> ${principal} </mark> \n at an interest rate of <mark> ${rate}% </mark>,\n you will receive an amount of <mark> ${interest} </mark> in the year <mark> ${year} </mark>`
 }
 
 //Dymanically show the input of the range slider for interest rate
@@ -26,7 +26,7 @@ function inputValidation(principal) {
     if (principal == NaN || principal <= 0) {
         alert("Enter a Positive Number")
         document.getElementById("principal").focus()
-        return false
+        return falsegit 
     }
     return true
 }
